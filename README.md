@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-**CodingPedia** é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades. Este projeto faz parte da comunidade **Coding Ferpa** e visa compartilhar conhecimento, promover a inclusão digital e fomentar a inovação na área de tecnologia.
+**CodingPedia** é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades. Este projeto faz parte da comunidade **[Coding Ferpa](https://codingferpa.org)** e visa compartilhar conhecimento, promover a inclusão digital e fomentar a inovação na área de tecnologia.
 
 ## Objetivo
 
@@ -26,9 +26,9 @@ Se você deseja contribuir com o projeto, siga as etapas abaixo:
 
 ## Comunidade
 
-O **CodingPedia** é mantido pela comunidade **Coding Ferpa**, uma rede de desenvolvedores e entusiastas da tecnologia da região de Fernandópolis. Nossa missão é conectar talentos, compartilhar conhecimento e promover o desenvolvimento tecnológico local.
+O **CodingPedia** é mantido pela comunidade **[Coding Ferpa](https://codingferpa.org)**, uma rede de desenvolvedores e entusiastas da tecnologia da região de Fernandópolis. Nossa missão é conectar talentos, compartilhar conhecimento e promover o desenvolvimento tecnológico local.
 
-Para saber mais sobre a **Coding Ferpa** e como participar de nossos eventos, acesse [codingferpa.org].
+Para saber mais sobre a **Coding Ferpa** e como participar de nossos eventos, acesse [codingferpa.org](https://codingferpa.org).
 
 ---
 
