@@ -33,3 +33,17 @@ Para saber mais sobre a **Coding Ferpa** e como participar de nossos eventos, ac
 ---
 
 Sinta-se à vontade para explorar, aprender e compartilhar com nós!
+
+
+# Testando localmente
+
+Instale o Hugo [Hugo](gohugo.io)
+
+rode:
+
+```bash
+hugo serve
+```
+
+e coloque seus documentos na pasta `content/`
+

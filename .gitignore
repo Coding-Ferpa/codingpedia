@@ -15,3 +15,5 @@ pom.xml.asc
 .cpcache/
 .lsp
 .clj-kondo
+.hugo_build.lock
+resources/
