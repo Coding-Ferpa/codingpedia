@@ -1,7 +1,8 @@
 ---
-weight: 80
+weight: 1
 title: "Sobre o Projeto"
-description: "descrito"
+description: "Codingpedia é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades. Este projeto faz parte da comunidade **[Coding Ferpa](https://codingferpa.org)** e visa compartilhar conhecimento, promover a inclusão digital e fomentar a inovação na área de tecnologia."
+
 icon: "article"
 date: "2025-03-23T11:53:09-03:00"
 lastmod: "2025-03-23T11:53:09-03:00"
@@ -53,4 +54,3 @@ hugo serve
 ```
 
 e coloque seus documentos na pasta `content/`
-
