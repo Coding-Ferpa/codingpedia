@@ -1,3 +1,8 @@
+---
+title: Glossario
+weight: 33
+---
+
 ## SGBD
 - Sistema gerenciador de banco de dados eh uma coleção de programas com proposito sistemático e eficiente nas tarefas de armazenamento e recuperação de dados.
 - Banco de Dados -> seção logica (arquivos) onde os dados são armazenados, normalmente, associado a um SGBD com repositórios dos respectivos dados e estruturas de controle.
