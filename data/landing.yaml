@@ -1,0 +1,37 @@
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+  #  backgroundImage:
+  #    path: "images/templates/hero"
+  #    filename:
+  #      desktop: "gradient-desktop.webp"
+  #      mobile: "gradient-mobile.webp"
+  #
+  badge:
+    text: v0.0.1
+    color: secondary # primary, secondary, success, danger, warning, info, light, dark
+    pill: true # boolean
+    soft: true # boolean
+
+  title: "Codingpedia"
+  subtitle: CodingPedia é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades.
+
+  image:
+    path: "images" # path to image under configured assets directory. default 'images'
+    filename: "lotus_docs_screenshot.png" # filename of your hero image (including file extension)
+    alt: "Lotus Docs Screenshot" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Inicie seus estudos"
+    url: "docs/about/"
+
+featureGrid:
+  enable: false
+
+imageCompare:
+  enable: false
