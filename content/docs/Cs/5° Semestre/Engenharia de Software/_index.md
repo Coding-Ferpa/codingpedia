@@ -1,5 +1,4 @@
 ---
 title: Engenharia de Software
-date: 2025-04-05
-weight: 1
+draft: true
 ---
