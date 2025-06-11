@@ -30,3 +30,7 @@ github = 'coding-ferpa'
 [params.docs]
 title = "Codingpedia"
 darkMode = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
