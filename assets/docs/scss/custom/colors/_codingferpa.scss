@@ -1,22 +1,36 @@
 // codingferpa theme
+
+// SCSS Variables - These drive Bootstrap generation
+$primary: #6bd490;
+$secondary: #5a4bcf;
+$success: #6bd490;
+$info: #17a2b8;
+$warning: #f17425;
+$danger: #e43f52;
+$light: #f8f9fa;
+$dark: #000000;
+
+// Optional: HSL variables if needed by theme components
+$blue-900: #1a237e;
+$blue-800: #283593;
+
 :root {
-    // Mint Green Primary
-    --primary: #6bd490;
-    --primary-50: #f0fdf4;
-    --primary-100: #dcfce7;
-    --primary-200: #bbf7d0;
-    --primary-300: #86efac;
-    --primary-400: #4ade80;
-    --primary-800: #166534;
+    --bs-primary: #{$primary};
+    --bs-secondary: #{$secondary};
+    --bs-success: #{$success};
+    --bs-info: #{$info};
+    --bs-warning: #{$warning};
+    --bs-danger: #{$danger};
+    --bs-light: #{$light};
+    --bs-dark: #{$dark};
 
-    // Purple Secondary
-    --secondary: #5a4bcf;
-
-    // HSL approximations for primary (Mint Green)
-    --primary-hsl: 142, 56%, 62%;
-    --primary-50-hsl: 145, 80%, 96%;
-    --primary-100-hsl: 142, 76%, 92%;
-    --primary-200-hsl: 142, 76%, 85%;
-    --primary-300-hsl: 142, 76%, 73%;
-    --primary-800-hsl: 145, 63%, 24%;
+    // Custom Overrides specific to LotusDocs if it uses these names
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --success: #{$success};
+    --info: #{$info};
+    --warning: #{$warning};
+    --danger: #{$danger};
+    --light: #{$light};
+    --dark: #{$dark};
 }
