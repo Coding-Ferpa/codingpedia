@@ -30,6 +30,10 @@ github = 'coding-ferpa'
 [params.docs]
 title = "Codingpedia"
 darkMode = true
+themeColor = "codingferpa"
+google_fonts = [["Space Mono", "400;700"]]
+sans_serif_font = "Space Mono"
+secondary_font = "Space Mono"
 
 [caches]
   [caches.images]

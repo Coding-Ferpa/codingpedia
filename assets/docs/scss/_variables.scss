@@ -1,0 +1,171 @@
+// Prefix for :root CSS variables
+
+$prefix: bs-;
+
+$btn-link-color: var(--#{$prefix}link-color);
+$btn-link-hover-color: var(--#{$prefix}link-hover-color);
+
+:root {
+
+    // color-variables (HSL)
+
+    --blue-900-hsl: 243, 72%, 25%;
+    --blue-800-hsl: 239, 70%, 32%;
+    --blue-700-hsl: 235, 68%, 38%;
+    --blue-600-hsl: 231, 66%, 45%;
+    --blue-500-hsl: 226, 66%, 51%;
+    --blue-400-hsl: 221, 77%, 60%;
+    --blue-300-hsl: 217, 88%, 69%;
+    --blue-200-hsl: 212, 100%, 79%;
+    --blue-100-hsl: 207, 100%, 88%;
+    --blue-50-hsl: 198, 100%, 97%;
+
+    --green-900-hsl: 153, 54%, 20%;
+    --green-800-hsl: 145, 57%, 25%;
+    --green-700-hsl: 136, 60%, 29%;
+    --green-600-hsl: 128, 63%, 34%;
+    --green-500-hsl: 119, 66%, 39%;
+    --green-400-hsl: 114, 49%, 51%;
+    --green-300-hsl: 110, 56%, 62%;
+    --green-200-hsl: 105, 64%, 74%;
+    --green-100-hsl: 102, 69%, 86%;
+    --green-50-hsl: 98, 73%, 97%;
+
+    // ... (keeping other HSL vars as default or update if needed)
+    // For brevity, assuming standard LotusDocs uses these primarily for alerts
+
+    --blue-900: hsl(var(--blue-900-hsl));
+    --blue-800: hsl(var(--blue-800-hsl));
+    --blue-700: hsl(var(--blue-700-hsl));
+    --blue-600: hsl(var(--blue-600-hsl));
+    --blue-500: hsl(var(--blue-500-hsl));
+    --blue-400: hsl(var(--blue-400-hsl));
+    --blue-300: hsl(var(--blue-300-hsl));
+    --blue-200: hsl(var(--blue-200-hsl));
+    --blue-100: hsl(var(--blue-100-hsl));
+    --blue-50: hsl(var(--blue-50-hsl));
+
+    --green-900: hsl(var(--green-900-hsl));
+    --green-800: hsl(var(--green-800-hsl));
+    --green-700: hsl(var(--green-700-hsl));
+    --green-600: hsl(var(--green-600-hsl));
+    --green-500: hsl(var(--green-500-hsl));
+    --green-400: hsl(var(--green-400-hsl));
+    --green-300: hsl(var(--green-300-hsl));
+    --green-200: hsl(var(--green-200-hsl));
+    --green-100: hsl(var(--green-100-hsl));
+    --green-50: hsl(var(--green-50-hsl));
+
+    // Custom Overrides for CodingFerpa
+    --secondary: #5a4bcf; // Purple
+    --success: #6bd490; // Mint Green
+    --info: var(--cyan);
+    --warning: var(--yellow);
+    --danger: var(--red);
+    --light: var(--gray-100);
+
+    // Dark Theme Variables - Pure Black
+    --dark: #000000;
+    --dark-alt: #1a1a1a;
+    --dark-secondary: #222222;
+
+    // scss-docs-start gray-color-variables
+    --white: #ffffff;
+    --gray-50: #f7fafc;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --black: #000000;
+
+    // Links
+    --link-color: var(--primary);
+    --link-decoration: underline;
+    --link-shade-percentage: 20%;
+    --link-hover-decoration: null;
+
+    // Buttons
+    --text-default: var(--text-dark);
+    --text-default-inv: var(--text-light);
+    --text-muted: var(--gray-600);
+    --#{$prefix}secondary-color: var(--gray-600);
+
+    --body-color: var(--text-default);
+    --body-bg: var(--white);
+
+    // Text
+    --text-dark: #3C4257;
+    --text-light: #dee2e6;
+
+    // Fonts
+    --fw-medium: 600;
+
+    // Shadows
+    --shadow-sm: 0 .125rem .25rem rgba(var(--dark), .15);
+    --shadow: 0 0 3px rgba(var(--dark), .15);
+    --shadow-md: 0 5px 13px rgba(var(--dark), .2);
+    --shadow-lg: 0 10px 25px rgba(var(--dark), 0.15);
+
+    // Overlay
+    --overlay: rgba(var(--dark), 0.7);
+    --bg-overlay-white: rgba(var(--white), 0.5);
+
+    // Back to top
+    --back-to-top-color: var(--white);
+
+    // Footer
+    --footer: #000000; // Deep Black Footer
+    --footer-bg: var(--white); // In light mode? This seems weird in default theme
+    // Actually, footer bg logic handles overrides.
+}
+
+[data-dark-mode] {
+
+    --body-bg: var(--dark); // #000000
+    --text-default: var(--text-light);
+    --text-default-inv: var(--text-dark);
+    --text-muted: #b6b9be; // Slightly brighter for contrast on black
+    --#{$prefix}secondary-color: #6c757d;
+
+    // Buttons
+    --btn-soft-color: var(--gray-400);
+    --btn-soft-bg: none;
+    --btn-soft-border: var(--gray-800);
+
+    --btn-primary-color: var(--primary-200);
+    --btn-primary-bg: none;
+    --btn-primary-border: var(--gray-700);
+
+    --btn-default-color: var(--text-default);
+    --btn-default-hover-color: var(--primary-300);
+    --btn-default-bg: transparent;
+    --btn-default-border: transparent;
+
+    // Icons
+    --icon-color: #b6bbc9;
+
+    // Cards
+    --card-bg: none;
+    --card-border-color: var(--gray-800);
+    --card-border-hover-color: var(--primary-200);
+
+    // sidebar
+    --sidebar-primary: var(--primary-300);
+    --sidebar-bg: var(--dark); // #000000
+    --top-header-bg: rgba(0, 0, 0, 0.9); // Black header
+    --sidebar-text-color: #b6bbc9;
+    --sidebar-border-color: var(--gray-900);
+
+    // Sidebar active/hover states - Need to be visible on black
+    --sidebar-dropdown-hover-bg: #1a1a1a;
+    --sidebar-menu-active-bg: #1a1a1a;
+    --sidebar-icon-bg: #1a1a1a;
+
+    --sidebar-light-icon: #f8f9fa;
+    --sidebar-scrollbar-thumb-color: var(--gray-800);
+}

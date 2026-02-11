@@ -1,0 +1,32 @@
+// Import Space Mono from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$font-family-monospace: "Space Mono", monospace !default;
+$font-family-sans-serif: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-secondary: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+:root {
+    --bs-font-sans-serif: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-font-monospace: "Space Mono", monospace;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
