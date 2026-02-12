@@ -29,12 +29,10 @@ hero:
   #   rounded: true 
 
   ctaButton:
-    icon: rocket_launch
     btnText: "Inicie seus estudos"
     url: "docs/about/"
   
   cta2Button:
-     icon: construction
      btnText: "Contribua com conhecimento"
      url: "https://github.com/coding-ferpa/Codingpedia"
 

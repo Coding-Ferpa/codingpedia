@@ -34,4 +34,29 @@ html[data-dark-mode] {
             }
         }
     }
+
+    // Mobile Header Override
+    @media (max-width: 991px) {
+        #topnav {
+            background-color: $dark !important;
+
+            .navigation-menu {
+                background-color: $dark !important;
+                border-top-color: rgba($white, 0.1) !important;
+
+                >li {
+                    >a {
+                        color: $white !important;
+                        border-bottom-color: rgba($white, 0.1) !important;
+                    }
+                }
+            }
+
+            #navigation {
+                background-color: $dark !important;
+                border-top-color: rgba($white, 0.1) !important;
+                border-bottom-color: rgba($white, 0.1) !important;
+            }
+        }
+    }
 }

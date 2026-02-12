@@ -1,18 +1,25 @@
 // Hero specific button overrides
 #hero {
+    .hero-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
     .btn-lg {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         height: 50px;
-        width: 50%;
         padding: 0 24px;
+        width: auto;
+        white-space: nowrap;
 
         .material-icons {
             margin-right: 8px;
             font-size: 1.2rem;
-            line-height: inherit;
-            color: inherit; // Inherit color from button text
+            line-height: 1;
+            color: inherit;
         }
     }
 
@@ -36,8 +43,6 @@
     }
 
     .btn-outline-primary {
-
-        // Light mode defaults (handled by Bootstrap/theme usually, but enforcing inheritance)
         .material-icons {
             color: inherit;
         }
@@ -46,7 +51,21 @@
         &:focus,
         &:active {
             .material-icons {
-                color: $white !important; // Outline buttons turn solid on hover
+                color: $white !important;
+            }
+        }
+    }
+
+    .hero-buttons {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: stretch !important;
+
+            .btn {
+                margin-right: 0 !important;
+                width: 100% !important;
+                justify-content: center;
+                text-align: center;
             }
         }
     }
