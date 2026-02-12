@@ -1,0 +1,42 @@
+/* Template Name: LotusLabs Docs
+   Author: Colin Wilson
+   E-mail: colin.wilson@proton.me
+   Created: October 2022
+   Version: 1.0.0
+   File Description: Main CSS file of the Landing Page template (Overridden)
+*/
+
+// Custom Fonts
+@import "custom/fonts/fonts";
+
+// Core files
+@import "bootstrap/functions";
+@import "custom/colors/codingferpa";
+@import "bootstrap/variables";
+@import "variables";
+@import "bootstrap/mixins";
+@import "bootstrap/bootstrap";
+
+// Plugins
+@import "custom/plugins/icons/google-material";
+
+// Structure
+@import "custom/structure/general";
+@import "custom/structure/topbar";
+@import "custom/structure/footer";
+
+// Components
+@import "custom/components/buttons";
+@import "custom/components/badge";
+@import "custom/components/backgrounds";
+
+// Pages
+@import "custom/pages/features";
+@import "custom/pages/helper";
+@import "custom/pages/hero";
+// @import "custom/pages/image-compare-viewer";
+
+// Debug Marker
+body {
+    --landing-debug: "active";
+}
