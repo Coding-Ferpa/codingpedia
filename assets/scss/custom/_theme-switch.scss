@@ -1,0 +1,27 @@
+// Theme Switcher
+
+#mode {
+    .toggle-light {
+        display: none;
+    }
+
+    .toggle-dark {
+        display: block;
+    }
+}
+
+html[data-dark-mode] {
+    #mode {
+        .toggle-light {
+            display: block;
+        }
+
+        .toggle-dark {
+            display: none;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}

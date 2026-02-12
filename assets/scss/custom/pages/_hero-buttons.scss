@@ -1,0 +1,71 @@
+// Hero specific button overrides
+#hero {
+    .btn-lg {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50%;
+        padding: 0 24px;
+
+        .material-icons {
+            margin-right: 8px;
+            font-size: 1.2rem;
+            line-height: inherit;
+            color: inherit; // Inherit color from button text
+        }
+    }
+
+    // Ensure icon colors match button states
+    .btn-primary {
+        color: $white !important;
+
+        .material-icons {
+            color: $white !important;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white !important;
+
+            .material-icons {
+                color: $white !important;
+            }
+        }
+    }
+
+    .btn-outline-primary {
+
+        // Light mode defaults (handled by Bootstrap/theme usually, but enforcing inheritance)
+        .material-icons {
+            color: inherit;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            .material-icons {
+                color: $white !important; // Outline buttons turn solid on hover
+            }
+        }
+    }
+}
+
+// Dark Mode Overrides for Hero Buttons
+html[data-dark-mode] {
+    #hero {
+        .btn-outline-primary {
+            color: lighten($primary, 10%);
+            border-color: lighten($primary, 10%);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: lighten($primary, 10%);
+                border-color: lighten($primary, 10%);
+                color: $white !important;
+            }
+        }
+    }
+}

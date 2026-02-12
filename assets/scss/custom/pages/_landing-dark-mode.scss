@@ -1,0 +1,47 @@
+// Landing Page Dark Mode Overrides
+
+html[data-dark-mode] {
+    body {
+        background-color: $dark; // Keep body dark
+        color: $white; // Default text color
+    }
+
+    // Feature Cards
+    .features {
+        &.feature-clean {
+            background-color: $dark !important; // Match body bg
+
+            .icons {
+                i {
+                    background-color: rgba($white, 0.1) !important; // Lighten icon bg
+                    color: $white !important;
+                }
+            }
+
+            .title {
+                color: $white !important;
+
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+
+            .text-muted {
+                color: $gray-500 !important; // Lighter muted text for contrast
+            }
+
+            p {
+                color: $gray-400 !important;
+            }
+        }
+    }
+
+    // Feature Grid Titles
+    .mt-4.title {
+        color: $white !important;
+    }
+
+    .text-muted {
+        color: $gray-500 !important;
+    }
+}

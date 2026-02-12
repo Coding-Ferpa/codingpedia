@@ -26,7 +26,7 @@
             {{ if or (not (isset .Site.Params.flexsearch "enabled")) (eq .Site.Params.flexsearch.enabled true) -}}
             {{ if and (.Site.Params.docsearch.appID) (.Site.Params.docsearch.apiKey) -}}
             {{ else }}
-            <button id="flexsearch-button" class="ms-3 btn btn-soft" data-bs-toggle="collapse"
+            <button id="flexsearch-button" class="ms-3 btn btn-default" data-bs-toggle="collapse"
                 data-bs-target="#FlexSearchCollapse" aria-expanded="false" aria-controls="FlexSearchCollapse">
                 <span class="material-icons size-20 menu-icon align-middle">search</span>
                 <span class="flexsearch-button-placeholder ms-1 me-2 d-none d-sm-block">{{ i18n "search_title" }}</span>

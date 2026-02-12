@@ -1,0 +1,37 @@
+// Header Dark Mode Overrides
+
+html[data-dark-mode] {
+    #topnav {
+        &.nav-sticky {
+            background-color: $dark !important;
+            box-shadow: 0 0 3px rgba(255, 255, 255, 0.15);
+
+            .navigation-menu {
+                >li {
+                    >a {
+                        color: $white !important;
+
+                        &:hover,
+                        &:active {
+                            color: $primary !important;
+                        }
+                    }
+
+                    &.active>a {
+                        color: $primary !important;
+                    }
+                }
+            }
+
+            .logo {
+                .l-dark {
+                    display: none !important;
+                }
+
+                .l-light {
+                    display: inline-block !important; // Show white logo
+                }
+            }
+        }
+    }
+}

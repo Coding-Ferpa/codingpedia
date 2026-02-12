@@ -6,12 +6,6 @@ hero:
   weight: 10
   template: hero
 
-  backgroundImage:
-    path: "images/templates/hero"
-    filename:
-      desktop: "gradient-desktop.webp"
-      mobile: "gradient-mobile.webp"
-
   badge:
     text: v0.0.1
     color: primary # primary, secondary, success, danger, warning, info, light, dark
@@ -37,12 +31,12 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Inicie seus estudos"
-    url: "/docs/about/"
+    url: "docs/about/"
   
-  # cta2Button:
-  #   icon: construction
-  #   btnText: "In Development"
-  #   url: "https://github.com/colinwilson/lotusdocs"
+  cta2Button:
+     icon: construction
+     btnText: "Contribua com conhecimento"
+     url: "https://github.com/coding-ferpa/Codingpedia"
 
   info: "**Open Source** MIT Licensed."
 

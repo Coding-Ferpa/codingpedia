@@ -19,6 +19,7 @@
 
 // Plugins
 @import "custom/plugins/icons/google-material";
+@import "custom/theme-switch";
 
 // Structure
 @import "custom/structure/general";
@@ -34,6 +35,10 @@
 @import "custom/pages/features";
 @import "custom/pages/helper";
 @import "custom/pages/hero";
+@import "custom/pages/landing-dark-mode";
+@import "custom/layout/footer";
+@import "custom/layout/header-dark-mode";
+@import "custom/pages/hero-buttons";
 // @import "custom/pages/image-compare-viewer";
 
 // Debug Marker
