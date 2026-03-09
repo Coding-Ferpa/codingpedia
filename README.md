@@ -20,7 +20,7 @@ Se você deseja contribuir com o projeto, siga as etapas abaixo:
 ### Regras de Contribuição
 
 - Os materiais devem ser gratuitos e acessíveis ao público.
-- Certifique-se de que o conteúdo seja relevante e esteja relacionado à programação ou áreas correlatas.
+- Certifique-se de que o conteúdo seja relevante e esteja relacionado à computação ou áreas correlatas.
 - Descreva o material de forma clara e objetiva.
 - Cite a fonte do material, quando aplicável.
 
