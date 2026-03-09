@@ -1,13 +1,12 @@
 ---
-weight: 1
-title: "Sobre o Projeto"
+title: "About"
 description: "Codingpedia é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades. Este projeto faz parte da comunidade **[Coding Ferpa](https://codingferpa.org)** e visa compartilhar conhecimento, promover a inclusão digital e fomentar a inovação na área de tecnologia."
-
 icon: "article"
 date: "2025-03-23T11:53:09-03:00"
 lastmod: "2025-03-23T11:53:09-03:00"
 draft: false
 toc: true
+weight: 0
 ---
 
 **CodingPedia** é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades. Este projeto faz parte da comunidade **[Coding Ferpa](https://codingferpa.org)** e visa compartilhar conhecimento, promover a inclusão digital e fomentar a inovação na área de tecnologia.

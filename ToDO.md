@@ -1,4 +1,0 @@
-- [ ] mudar landing page
-- [ ] arrumar roteamento dos docs
-- [ ] fazer CI do build
-- [ ] deploy no gh pages
