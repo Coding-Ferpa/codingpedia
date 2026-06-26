@@ -4,8 +4,8 @@
 <section id="{{ $sectionTitle }}" class="hero-section">
     <div class="hero-section__glow" aria-hidden="true"></div>
     <div class="container-fluid hero-section__container position-relative">
-        <div class="row py-5">
-            <div class="col-12">
+        <div class="row py-5 align-items-center hero-section__grid">
+            <div class="col-lg-6">
                 <div class="hero-content">
                     {{ with .badge }}
                     <span class="badge {{ if eq .pill true }}rounded-pill{{ end }} bg-{{ if eq .soft true }}soft-{{ else }}hard-{{ end }}{{ .color }} mb-3">{{ .text }}</span>
@@ -43,6 +43,12 @@
                     {{ end }}
                 </div>
             </div>
+
+            {{ with resources.Get "images/logos/icon-codingpedia.png" }}
+            <div class="col-lg-6 hero-content__aside">
+                <img src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}" class="hero-content__icon" decoding="async" aria-hidden="true">
+            </div>
+            {{ end }}
         </div>
     </div>
 </section>
