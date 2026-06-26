@@ -1,12 +1,25 @@
-// Google Material Icon Font via
-// https://github.com/marella/material-symbols/tree/main/material-symbols
-
+// Google Material Symbols — font bundled in assets/fonts/
 @font-face {
-  font-family: 'Material Symbols Outlined';
-  font-weight: 400 700;
-  font-display: block;
-  font-style: normal;
-  src: local('Material Icons'), local('MaterialIcons-Outlined'),
-    url('../docs/fonts/material-symbols-outlined.woff2') format('woff2'), /* Super Modern Browsers */
-    // url('../docs/fonts/material-symbols-outlined.woff') format('woff'); /* Modern Browsers */
+    font-family: 'Material Symbols Outlined';
+    font-weight: 100 700;
+    font-display: block;
+    font-style: normal;
+    src: url($material-symbols-url) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }

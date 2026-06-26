@@ -1,0 +1,37 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div class="site-footer__brand">
+                {{ with resources.Get "images/logos/codingpedia.png" }}
+                <a href="{{ relLangURL "" }}" aria-label="Codingpedia — Início">
+                    <img src="{{ .RelPermalink }}" alt="Codingpedia" class="site-footer__logo" width="{{ .Width }}" height="{{ .Height }}" decoding="async">
+                </a>
+                {{ end }}
+            </div>
+
+            <div class="site-footer__nav">
+                <p class="site-footer__heading">Navegação</p>
+                <ul class="site-footer__links">
+                    {{- range .Site.Menus.primary }}
+                    <li>
+                        <a href="{{ if hasPrefix .URL "http" }}{{ .URL }}{{ else }}{{ relLangURL .URL }}{{ end }}"
+                            {{ if hasPrefix .URL "http" }}rel="noopener noreferrer" target="_blank"{{ end }}>
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    <li><a href="https://codingferpa.org/CODE_OF_CONDUCT" rel="noopener noreferrer" target="_blank">Código de conduta</a></li>
+                </ul>
+            </div>
+
+            <div class="site-footer__meta">
+                <p class="site-footer__copy mb-0">
+                    copyleft {{ now.Format "2006" }} Coding Ferpa. Nenhum direito reservado.
+                </p>
+                <p class="site-footer__tagline mb-0">
+                    Desenvolvido com <span class="site-footer__heart" aria-hidden="true">❤</span> da comunidade para a comunidade.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

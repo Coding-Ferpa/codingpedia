@@ -7,15 +7,19 @@
     right: 0;
     left: 0;
     top: 0;
-    background-color: transparent;
     z-index: 999;
     border: 0;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    transition: all 0.3s ease;
+
+    &.nav-sticky {
+        background: rgba($white, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba($dark, 0.06);
+        box-shadow: none;
+    }
 
     .logo {
-        float: left;
-        color: $dark !important;
         .l-dark,
         .logo-dark-mode {
             display: none;
@@ -122,19 +126,21 @@
             > a {
                 display: flex;
                 color: $dark;
-                font-size: 15px;
+                font-size: 0.9375rem;
                 background-color: transparent !important;
-                font-weight: 700;
-                letter-spacing: 1px;
+                font-weight: 600;
+                letter-spacing: 0;
                 line-height: 24px;
-                // text-transform: uppercase;
-                font-family: $font-family-base;
-                padding-left: 15px;
-                padding-right: 15px;
+                font-family: $font-family-secondary;
+                padding: 0.5rem 0.875rem;
+                border-radius: 0.5rem;
                 align-items: center;
+                transition: color 0.2s ease, background-color 0.2s ease;
+
                 &:hover,
-                &:active{
+                &:active {
                     color: $primary;
+                    background-color: rgba($primary, 0.08) !important;
                 }
             }
         }

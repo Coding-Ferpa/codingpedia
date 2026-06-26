@@ -1,4 +1,4 @@
-{{ with resources.Get "images/no_bg_mini_logo.png" }}
-<link rel="icon" type="image/png" href="{{ .Permalink }}">
-<link rel="apple-touch-icon" href="{{ .Permalink }}">
+{{ with resources.Get "images/logos/icon.png" }}
+<link rel="icon" type="image/png" href="{{ .RelPermalink }}">
+<link rel="apple-touch-icon" href="{{ .RelPermalink }}">
 {{ end }}

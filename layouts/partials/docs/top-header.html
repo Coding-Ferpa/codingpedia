@@ -2,17 +2,13 @@
 <div id="top-header" class="top-header d-print-none">
     <div class="header-bar d-flex justify-content-between">
         <div class="d-flex align-items-center">
-            <a href='{{ with .Site.Params.docs.logoLinkURL }}{{ . }}{{ else }}{{ relLangURL "" }}{{ end }}'
-                class="logo-icon me-3" aria-label="HomePage" alt="HomePage">
+            <a href="{{ partial "docs-home-url.html" . }}"
+                class="logo-icon me-3" aria-label="Codingpedia — Início">
                 <div class="small">
-                    {{ with resources.Get "images/no_bg_mini_logo.png" }}
-                    <img src="{{ .Permalink }}" alt="Coding Ferpa" style="height: 30px;">
-                    {{ end }}
+                    {{ partial "brand-logo.html" (dict "size" "sm" "showText" false "link" false) }}
                 </div>
                 <div class="big">
-                    {{ with resources.Get "images/no_bg_logo.png" }}
-                    <img src="{{ .Permalink }}" alt="Coding Ferpa" style="height: 40px;">
-                    {{ end }}
+                    {{ partial "brand-logo.html" (dict "size" "md" "showText" false "link" false) }}
                 </div>
             </a>
             <button id="close-sidebar" class="btn btn-icon btn-soft">

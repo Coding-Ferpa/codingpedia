@@ -1,61 +1,48 @@
-// Header Dark Mode Overrides
+// Header theme styles
+
+#topnav.nav-sticky {
+    .navigation-menu > li > a {
+        color: var(--cf-text-secondary);
+
+        &:hover,
+        &:active {
+            color: var(--cf-text-primary);
+        }
+    }
+}
 
 html[data-dark-mode] {
     #topnav {
+        .navigation-menu > li > a {
+            color: var(--cf-text-secondary) !important;
+
+            &:hover,
+            &:active {
+                color: var(--cf-text-primary) !important;
+                background-color: var(--cf-bg-elevated) !important;
+            }
+        }
+
         &.nav-sticky {
-            background-color: $dark !important;
-            box-shadow: 0 0 3px rgba(255, 255, 255, 0.15);
-
-            .navigation-menu {
-                >li {
-                    >a {
-                        color: $white !important;
-
-                        &:hover,
-                        &:active {
-                            color: $primary !important;
-                        }
-                    }
-
-                    &.active>a {
-                        color: $primary !important;
-                    }
-                }
-            }
-
-            .logo {
-                .l-dark {
-                    display: none !important;
-                }
-
-                .l-light {
-                    display: inline-block !important; // Show white logo
-                }
-            }
+            background: rgba($dark, 0.85) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cf-border);
+            box-shadow: none;
         }
     }
 
-    // Mobile Header Override
     @media (max-width: 991px) {
         #topnav {
-            background-color: $dark !important;
+            background-color: var(--cf-bg-primary) !important;
 
-            .navigation-menu {
-                background-color: $dark !important;
-                border-top-color: rgba($white, 0.1) !important;
-
-                >li {
-                    >a {
-                        color: $white !important;
-                        border-bottom-color: rgba($white, 0.1) !important;
-                    }
-                }
-            }
-
+            .navigation-menu,
             #navigation {
-                background-color: $dark !important;
-                border-top-color: rgba($white, 0.1) !important;
-                border-bottom-color: rgba($white, 0.1) !important;
+                background-color: var(--cf-bg-primary) !important;
+                border-color: var(--cf-border) !important;
+
+                > li > a {
+                    color: var(--cf-text-primary) !important;
+                }
             }
         }
     }

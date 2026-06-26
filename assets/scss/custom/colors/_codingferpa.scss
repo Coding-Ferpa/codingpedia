@@ -1,18 +1,15 @@
-// codingferpa theme
+// codingferpa theme — light default, dark via [data-dark-mode]
 
-// SCSS Variables - These drive Bootstrap generation
-$primary: #6bd490;
-$secondary: #5a4bcf;
-$success: #6bd490;
+$primary: #58d68d;
+$secondary: #4a4199;
+$success: #22c55e;
 $info: #17a2b8;
 $warning: #f17425;
 $danger: #e43f52;
-$light: #f8f9fa;
-$dark: #000000;
+$light: #f5f5f5;
+$dark: #0d0d0d;
 
-// Optional: HSL variables if needed by theme components
-$blue-900: #1a237e;
-$blue-800: #283593;
+$cf-accent-muted: #6bd490;
 
 :root {
     --bs-primary: #{$primary};
@@ -24,7 +21,6 @@ $blue-800: #283593;
     --bs-light: #{$light};
     --bs-dark: #{$dark};
 
-    // Custom Overrides specific to LotusDocs if it uses these names
     --primary: #{$primary};
     --secondary: #{$secondary};
     --success: #{$success};
@@ -33,4 +29,24 @@ $blue-800: #283593;
     --danger: #{$danger};
     --light: #{$light};
     --dark: #{$dark};
+    --cf-accent-muted: #{$cf-accent-muted};
+
+    // Light theme (default)
+    --cf-bg-primary: #ffffff;
+    --cf-bg-elevated: #f8f9fa;
+    --cf-bg-surface: #f1f3f5;
+    --cf-text-primary: #171717;
+    --cf-text-secondary: #525252;
+    --cf-text-muted: #737373;
+    --cf-border: #e5e5e5;
+}
+
+html[data-dark-mode] {
+    --cf-bg-primary: #0d0d0d;
+    --cf-bg-elevated: #161616;
+    --cf-bg-surface: #1e1e1e;
+    --cf-text-primary: #f5f5f5;
+    --cf-text-secondary: #a3a3a3;
+    --cf-text-muted: #737373;
+    --cf-border: #262626;
 }
