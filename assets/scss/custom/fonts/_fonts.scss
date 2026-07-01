@@ -1,32 +1,22 @@
-// Import Space Mono from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 
-$font-family-monospace: "Space Mono", monospace !default;
-$font-family-sans-serif: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-secondary: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-base: "Poppins", system-ui, sans-serif !default;
+$font-family-monospace: "JetBrains Mono", ui-monospace, monospace !default;
+$font-family-sans-serif: "Poppins", system-ui, sans-serif !default;
+$font-family-secondary: "Poppins", system-ui, sans-serif !default;
 
 :root {
-    --bs-font-sans-serif: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --bs-font-monospace: "Space Mono", monospace;
+    --bs-font-sans-serif: "Poppins", system-ui, sans-serif;
+    --bs-font-monospace: "JetBrains Mono", ui-monospace, monospace;
     --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-heading-font-family: "Poppins", system-ui, sans-serif;
 }
 
 body {
-    font-family: var(--bs-font-sans-serif);
+    font-family: var(--bs-body-font-family);
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    font-family: "Space Mono", monospace;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: var(--bs-heading-font-family);
     font-weight: 700;
 }

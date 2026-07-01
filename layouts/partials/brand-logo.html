@@ -1,0 +1,23 @@
+{{ $size := .size | default "md" }}
+{{ $showText := .showText | default false }}
+{{ $href := .href | default (relLangURL "") }}
+{{ $class := .class | default "" }}
+{{ $link := .link | default true }}
+{{ $logo := resources.Get "images/logos/codingpedia.png" }}
+
+{{ if $link }}
+<a class="brand-logo brand-logo--{{ $size }} {{ $class }}" href="{{ $href }}" aria-label="Codingpedia — Início">
+{{ else }}
+<span class="brand-logo brand-logo--{{ $size }} {{ $class }}">
+{{ end }}
+    {{ with $logo }}
+    <img class="brand-logo__img" src="{{ .RelPermalink }}" alt="Codingpedia" width="{{ .Width }}" height="{{ .Height }}" decoding="async">
+    {{ end }}
+    {{ if $showText }}
+    <span class="brand-logo__text">Codingpedia</span>
+    {{ end }}
+{{ if $link }}
+</a>
+{{ else }}
+</span>
+{{ end }}

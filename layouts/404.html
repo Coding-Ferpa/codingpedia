@@ -1,12 +1,11 @@
-{{ define "main"}}    
-      <div class="d-flex flex-column justify-content-center align-items-center four-oh-four">                    
-        <div class="px-1">
-            <h1 class="text-center">Page not found :(</h1>
-            <h4 class="text-center">The page you are looking for doesn't exist or has been moved.</h4>
-        </div>
-        <div class="px-1">            
-            <a href="{{ "" | relURL }}"><i class="material-icons size-48 me-0">home</i></a>
-            <!-- <a href="{{ "" | relURL }}"><i class="material-icons size-48 me-0">menu_book</i></a> -->
-        </div>
-      </div>    
+{{ define "main" }}
+<div class="d-flex flex-column justify-content-center align-items-center four-oh-four text-center px-3">
+    <div class="four-oh-four__code" aria-hidden="true">404</div>
+    <h1 class="four-oh-four__title">{{ i18n "page_not_found" }}</h1>
+    <p class="four-oh-four__desc text-muted">{{ i18n "page_not_found_desc" }}</p>
+    <a href="{{ "" | relURL }}" class="btn btn-primary mt-3">
+        <i class="material-icons align-middle me-1">home</i>
+        {{ i18n "back_to_home" }}
+    </a>
+</div>
 {{ end }}

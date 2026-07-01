@@ -1,13 +1,10 @@
-/* Template Name: Lotus Docs
-   Author: Colin Wilson
-   E-mail: colin@aigis.uk
-   Created: October 2022
-   Version: 1.2.0
-   File Description: Main CSS file for Lotus Docs
-*/
+/* Main CSS file for Lotus Docs */
+
+{{ $materialFont := resources.Get "fonts/material-symbols-outlined.woff2" }}
+$material-symbols-url: "{{ if $materialFont }}{{ $materialFont.RelPermalink }}{{ end }}";
 
 // Icon Fonts
-@import "custom/plugins/icons/google-material";
+@import "../../scss/custom/plugins/icons/google-material";
 
 // Custom Fonts
 @import "custom/fonts/fonts";
@@ -30,6 +27,10 @@ $code-block-padding-top: 1.25rem 0 0 0;
 @import "custom/structure/doc-nav";
 @import "custom/structure/toc";
 @import "custom/structure/footer";
+
+// Shared
+@import "../../scss/custom/shared/brand-logo";
+@import "../../scss/custom/shared/site-footer";
 
 // Components
 @import "custom/components/buttons";

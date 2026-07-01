@@ -39,6 +39,25 @@
 
 .docs-content {
     order: 1;
+    font-family: var(--bs-body-font-family);
+}
+
+.docs-content .main-content {
+    font-family: var(--bs-body-font-family);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--cf-text-primary);
+    letter-spacing: 0;
+
+    p,
+    li,
+    td,
+    th,
+    blockquote {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 
 // Links
@@ -68,7 +87,7 @@
 }
 
 .docs-content .main-content li {
-    color: var(--text-default);
+    color: var(--cf-text-primary);
 }
 
 .docs-content .main-content h1,
@@ -76,8 +95,9 @@
 .docs-content .main-content h3,
 .docs-content .main-content h4,
 .docs-content .main-content h5 {
+    font-family: var(--bs-heading-font-family);
     font-weight: 700;
-    color: var(--body-color);
+    color: var(--cf-text-primary);
 }
 
 .docs-content .content-title {
@@ -267,6 +287,24 @@ i {
 
 .docs-content .main-content .alert ul {
     font-size: var(--font-size-sm);
+}
+
+.docs-section-intro {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color, var(--gray-300));
+}
+
+.docs-section-author-label {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.docs-topic-grid {
+    margin-top: 0.5rem;
+}
+
+.docs-topic-card {
+    min-height: 120px;
 }
 
 // <figcaption>

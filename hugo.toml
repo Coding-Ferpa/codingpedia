@@ -10,6 +10,21 @@ enableEmoji = true
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 disable = false
 
+[[menus.primary]]
+name = "Documentação"
+url = "docs/about/"
+weight = 10
+
+[[menus.primary]]
+name = "Contribuir"
+url = "docs/howto/"
+weight = 20
+
+[[menus.primary]]
+name = "GitHub"
+url = "https://github.com/coding-ferpa/Codingpedia"
+weight = 30
+
 [markup]
 [markup.tableOfContents]
 endLevel = 3
@@ -22,16 +37,23 @@ unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
 block = false
 
 [params]
+google_fonts = [["Poppins", "400;500;600;700"], ["JetBrains Mono", "400;500"]]
+
 [params.social]
 github = 'coding-ferpa'
+
+[params.footer]
+copyright = "© :YEAR: Coding Ferpa. Todos os direitos reservados"
+copyrightYearToken = ":YEAR:"
 
 [params.docs]
 title = "Codingpedia"
 darkMode = true
 themeColor = "codingferpa"
-google_fonts = [["Space Mono", "400;700"]]
-sans_serif_font = "Space Mono"
-secondary_font = "Space Mono"
+logoLinkURL = "docs/about/"
+google_fonts = [["Poppins", "400;500;600;700"], ["JetBrains Mono", "400;500"]]
+sans_serif_font = "Poppins"
+secondary_font = "Poppins"
 
 [caches]
   [caches.images]

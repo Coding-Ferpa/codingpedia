@@ -44,12 +44,10 @@ Sinta-se à vontade para explorar, aprender e compartilhar com nós!
 
 # Testando localmente
 
-Instale o Hugo [Hugo](gohugo.io)
-
-rode:
+Consulte o guia [Rodando o Projeto Localmente]({{< relref "RodandoLocalmente.md" >}}) ou instale o [Hugo](https://gohugo.io/getting-started/installing/) e execute:
 
 ```bash
-hugo serve
+hugo server
 ```
 
-e coloque seus documentos na pasta `content/`
+Coloque seus documentos na pasta `content/`.

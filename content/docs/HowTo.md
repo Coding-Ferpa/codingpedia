@@ -9,7 +9,7 @@ Contribuir com este projeto é simples e muito bem-vindo! Siga o passo a passo a
 
 ## 1. Faça um Fork do Repositório
 
-Acesse o repositório principal no GitHub e clique em **Fork** no canto superior direito para criar uma cópia em sua conta.
+Acesse o [repositório principal no GitHub](https://github.com/coding-ferpa/Codingpedia) e clique em **Fork** no canto superior direito para criar uma cópia em sua conta.
 Se precisar de ajuda com esse processo, confira o [guia oficial do GitHub sobre forks](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
 
 ## 2. Clone o Repositório para Sua Máquina
@@ -17,10 +17,11 @@ Se precisar de ajuda com esse processo, confira o [guia oficial do GitHub sobre 
 No terminal, use o comando:
 
 ```sh
-git clone https://github.com/seu-usuario/seu-fork.git
+git clone https://github.com/coding-ferpa/Codingpedia.git
+cd Codingpedia
 ```
 
-Substitua seu-usuario e seu-fork pelas informações do seu repositório forkado.
+Se você fez fork, use a URL do seu repositório no lugar da URL acima.
 
 ## Criando Conteudo
 Se você quiser contribuir criando um novo conteúdo (por exemplo, "Como Contribuir"), siga os passos abaixo:

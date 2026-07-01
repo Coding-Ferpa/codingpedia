@@ -1,103 +1,56 @@
 {{ $sectionTitle := .Scratch.Get "sectionTitle" }}
 {{ with (index .Site.Data.landing $sectionTitle) }}
 {{ if eq .enable true }}
-<!-- Hero Start -->
-
-<section id="{{ $sectionTitle }}" class="d-table w-100 overflow-hidden hero">
-    <div class="container">
-        <div class="row mt-5 align-items-center">
-
-            <div class="col-lg-6 col-md-6">
-                <div class="title-heading">
+<section id="{{ $sectionTitle }}" class="hero-section">
+    <div class="hero-section__glow" aria-hidden="true"></div>
+    <div class="container-fluid hero-section__container position-relative">
+        <div class="row py-5 align-items-center hero-section__grid">
+            <div class="col-lg-6">
+                <div class="hero-content">
                     {{ with .badge }}
-                    <span
-                        class="badge {{ if eq .pill true }}rounded-pill{{ end }} bg-{{ if eq .soft true }}soft-{{ else }}hard-{{ end }}{{ .color }} mb-1">{{
-                        .text }}</span>
-                    {{ end }}
-                    <h4 class="heading mt-0 mb-3">
-                        {{ with .titleLogo }}
-                        {{ $path := .path | default "images" }}
-                        {{ $filename := .filename }}
-                        {{ $height := .height | default "70px" }}
-                        {{ $alt := .alt | default "logo image" }}
-                        {{ $path := printf "%s/%s" $path $filename }}
-                        {{ with $filename }}
-                        <span>
-                            {{ with $image := resources.Get $path }}
-                            {{ if eq .MediaType.SubType "svg" }}
-                            {{ .Content | safeHTML }}
-                            {{ else }}
-                            {{ end }}
-                            {{ end }}
-                        </span>
-                        {{ end }}
-                        {{ end }}
-                        {{ with .title }}{{ . }}{{ end }}
-                    </h4>
-                    {{ with .subtitle }}
-                    <p class="para-desc text-muted mb-0">{{ . | markdownify }}</p>
+                    <span class="badge {{ if eq .pill true }}rounded-pill{{ end }} bg-{{ if eq .soft true }}soft-{{ else }}hard-{{ end }}{{ .color }} mb-3">{{ .text }}</span>
                     {{ end }}
 
-                    <div class="mt-3 d-flex align-items-center hero-buttons">
+                    {{ with resources.Get "images/logos/codingpedia.png" }}
+                    <div class="hero-content__logo mb-4">
+                        <img src="{{ .RelPermalink }}" alt="Codingpedia" width="{{ .Width }}" height="{{ .Height }}" class="hero-content__logo-img" decoding="async">
+                    </div>
+                    {{ else }}
+                    <h1 class="hero-content__title">{{ with .title }}{{ . }}{{ end }}</h1>
+                    {{ end }}
+
+                    {{ with .subtitle }}
+                    <p class="hero-content__subtitle">{{ . | markdownify }}</p>
+                    {{ end }}
+
+                    <div class="hero-buttons mt-4">
                         {{ with .ctaButton }}
-                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-primary me-2 mt-2">
-                            {{ with .btnText }}
-                            {{ . }}
-                            {{ end }}
-                            {{ with .icon }}
-                            <span class="material-icons">{{ . }}</span>
-                            {{ end }}
+                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-primary">
+                            {{ .btnText }}
                         </a>
                         {{ end }}
                         {{ with .cta2Button }}
-                        <a href="{{ relLangURL .url }}" class="btn btn-lg btn-outline-primary mt-2">
-                            {{ with .btnText }}
-                            {{ . }}
-                            {{ end }}
-                            {{ with .icon }}
-                            <span class="material-icons">{{ . }}</span>
-                            {{ end }}
+                        <a href="{{ if hasPrefix .url "http" }}{{ .url }}{{ else }}{{ relLangURL .url }}{{ end }}"
+                            class="btn btn-lg btn-outline-primary"
+                            {{ if hasPrefix .url "http" }}rel="noopener noreferrer" target="_blank"{{ end }}>
+                            {{ .btnText }}
                         </a>
                         {{ end }}
                     </div>
 
                     {{ with .info }}
-                    <p class="text-muted mb-0 mt-3">{{ . | markdownify }}</p>
+                    <p class="hero-content__info">{{ . | markdownify }}</p>
                     {{ end }}
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
-                {{ with .image }}
-                {{ $path := .path | default "images" }}
-                {{ $filename := .filename }}
-                {{ $alt := .alt | default "hero image" }}
-                {{ $boxShadow := .boxShadow | default false }}
-                {{ $rounded := .rounded | default false }}
-                {{ $path := printf "%s/%s" $path $filename }}
-                {{ with $filename }}
-                <div class="ms-lg-4">
-                    <div class="classic-hero-image">
-                        {{ with $image := resources.Get $path }}
-                        {{ if eq .MediaType.SubType "svg" }}
-                        {{ .Content | safeHTML }}
-                        {{ else }}
-                        {{ with .Resize (printf "%dx%d webp q85 drawing Lanczos" .Width .Height) }}
-                        <img src="{{ .RelPermalink }}"
-                            class="{{ if $boxShadow }}shadow-lg{{ else }}{{ end }} mx-auto d-block {{ if $rounded }}rounded-top-4{{ else }}{{ end }}"
-                            width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}">
-                        {{ end }}
-                        {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-                {{ end }}
-                {{ end }}
-            </div><!--end col-->
-
-        </div><!--end row-->
-    </div> <!--end container-->
-</section><!--end section-->
-<!-- Hero End -->
+            {{ with resources.Get "images/logos/icon-codingpedia.png" }}
+            <div class="col-lg-6 hero-content__aside">
+                <img src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}" class="hero-content__icon" decoding="async" aria-hidden="true">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
 {{ end }}
 {{ end }}

@@ -1,0 +1,37 @@
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none !important;
+    color: inherit;
+    line-height: 1;
+
+    &__img {
+        display: block;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: -0.01em;
+        color: var(--cf-text-primary);
+    }
+
+    &--sm &__img {
+        height: 28px;
+        max-width: 140px;
+    }
+
+    &--md &__img {
+        height: 36px;
+        max-width: 180px;
+    }
+
+    &--lg &__img {
+        height: 48px;
+        max-width: 240px;
+    }
+}

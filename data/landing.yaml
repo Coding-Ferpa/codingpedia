@@ -8,35 +8,22 @@ hero:
 
   badge:
     text: v0.0.1
-    color: primary # primary, secondary, success, danger, warning, info, light, dark
-    pill: true # boolean
-    soft: true # boolean
-
-  titleLogo:
-    path: "images"
-    filename: "logo-text.png"
-    alt: "Coding Ferpa"
-    height: 70px
+    color: primary
+    pill: true
+    soft: true
 
   title: "Codingpedia"
-  subtitle: CodingPedia é um repositório colaborativo que reúne materiais gratuitos sobre programação, com o objetivo de ajudar desenvolvedores de todos os níveis a aprimorar suas habilidades.
-
-  # image:
-  #   path: "images" 
-  #   filename: "codingpedia-homepage.webp" # Placeholder or remove if no screenshot yet
-  #   alt: "Codingferpa screenshot"
-  #   boxShadow: true 
-  #   rounded: true 
+  subtitle: Repositório colaborativo com materiais gratuitos sobre programação — para desenvolvedores de todos os níveis aprimorarem suas habilidades.
 
   ctaButton:
     btnText: "Inicie seus estudos"
     url: "docs/about/"
-  
-  cta2Button:
-     btnText: "Contribua com conhecimento"
-     url: "https://github.com/coding-ferpa/Codingpedia"
 
-  info: "**Open Source** MIT Licensed."
+  cta2Button:
+    btnText: "Contribua com conhecimento"
+    url: "https://github.com/coding-ferpa/Codingpedia"
+
+  info: "**Open Source** · Licença MIT"
 
 # Feature Grid
 featureGrid:
@@ -45,7 +32,7 @@ featureGrid:
   template: feature grid
 
   title: Por que a Codingpedia?
-  subtitle: Uma plataforma feita pela comunidade para a comunidade.
+  subtitle: Uma plataforma feita pela comunidade, para a comunidade.
 
   items:
     - title: Gratuito

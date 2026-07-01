@@ -1,79 +1,32 @@
-// Hero specific button overrides
-#hero {
+// Hero button overrides
+.hero-section {
     .hero-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .btn-lg {
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: 50px;
-        padding: 0 24px;
-        width: auto;
-        white-space: nowrap;
-
-        .material-icons {
-            margin-right: 8px;
-            font-size: 1.2rem;
-            line-height: 1;
-            color: inherit;
-        }
-    }
-
-    // Ensure icon colors match button states
-    .btn-primary {
-        color: $white !important;
-
-        .material-icons {
-            color: $white !important;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
+        .btn-primary {
             color: $white !important;
 
             .material-icons {
-                color: $white !important;
+                color: inherit;
             }
         }
-    }
 
-    .btn-outline-primary {
-        .material-icons {
-            color: inherit;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
+        .btn-outline-primary {
             .material-icons {
-                color: $white !important;
+                color: inherit;
             }
-        }
-    }
 
-    .hero-buttons {
-        @media (max-width: 768px) {
-            flex-direction: column;
-            align-items: stretch !important;
-
-            .btn {
-                margin-right: 0 !important;
-                width: 100% !important;
-                justify-content: center;
-                text-align: center;
+            &:hover,
+            &:focus,
+            &:active {
+                .material-icons {
+                    color: $white !important;
+                }
             }
         }
     }
 }
 
-// Dark Mode Overrides for Hero Buttons
 html[data-dark-mode] {
-    #hero {
+    .hero-section {
         .btn-outline-primary {
             color: lighten($primary, 10%);
             border-color: lighten($primary, 10%);

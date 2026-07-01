@@ -1,0 +1,38 @@
+[search_title]
+other = "Buscar"
+
+[search_navigate]
+other = "para navegar"
+
+[search_select]
+other = "para selecionar"
+
+[search_close]
+other = "para fechar"
+
+[search_cancel]
+other = "cancelar"
+
+[enable_dark_mode]
+other = "Ativar modo escuro"
+
+[enable_light_mode]
+other = "Ativar modo claro"
+
+[on_this_page]
+other = "Nesta página"
+
+[table_of_contents]
+other = "Sumário"
+
+[home]
+other = "Início"
+
+[page_not_found]
+other = "Página não encontrada"
+
+[page_not_found_desc]
+other = "A página que você procura não existe ou foi movida."
+
+[back_to_home]
+other = "Voltar ao início"

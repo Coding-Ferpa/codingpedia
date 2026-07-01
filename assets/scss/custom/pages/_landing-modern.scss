@@ -1,0 +1,261 @@
+// Modern landing — theme-aware via --cf-* CSS variables
+
+body {
+    background-color: var(--cf-bg-primary);
+    color: var(--cf-text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-section {
+    position: relative;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    background-color: var(--cf-bg-primary);
+
+    &__container {
+        width: 100%;
+        max-width: 96rem;
+        margin-inline: auto;
+        padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    &__glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba($primary, 0.12) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    &__grid {
+        --bs-gutter-x: clamp(2rem, 5vw, 5rem);
+        --bs-gutter-y: 2.5rem;
+    }
+}
+
+html[data-dark-mode] .hero-section__glow {
+    background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba($primary, 0.15) 0%, transparent 70%);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: none;
+
+    &__logo-img {
+        width: 100%;
+        max-width: 36rem;
+        height: auto;
+    }
+
+    &__aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 992px) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        max-width: 24rem;
+        height: auto;
+    }
+
+    &__title {
+        font-size: clamp(2.25rem, 5vw, 3.5rem);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.25rem;
+        background: linear-gradient(135deg, darken($primary, 8%) 0%, $secondary 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__subtitle {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: var(--cf-text-secondary);
+        max-width: 42rem;
+        margin-bottom: 0;
+    }
+
+    &__info {
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        color: var(--cf-text-muted);
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        padding: 0.625rem 1.5rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, $primary 0%, $cf-accent-muted 100%);
+        border: none;
+        color: $white !important;
+        box-shadow: 0 4px 16px rgba($primary, 0.3);
+
+        &:hover {
+            box-shadow: 0 6px 24px rgba($primary, 0.4);
+        }
+    }
+
+    .btn-outline-primary {
+        background: var(--cf-bg-elevated);
+        border-color: var(--cf-border);
+        color: var(--cf-text-primary) !important;
+
+        &:hover {
+            border-color: $primary;
+            color: darken($primary, 10%) !important;
+            background: var(--cf-bg-surface);
+        }
+    }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.features-section {
+    padding: 4rem 0 6rem;
+    background: var(--cf-bg-primary);
+
+    &__title {
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--cf-text-primary);
+    }
+
+    &__subtitle {
+        font-size: 1.0625rem;
+        color: var(--cf-text-secondary);
+        margin-bottom: 0;
+    }
+}
+
+.feature-card {
+    background: var(--cf-bg-elevated);
+    border: 1px solid var(--cf-border);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: rgba($primary, 0.4);
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 0.75rem;
+        background: rgba($primary, 0.12);
+        color: darken($primary, 12%);
+        margin-bottom: 1rem;
+
+        .material-icons {
+            font-size: 1.5rem;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--cf-text-primary);
+    }
+
+    &__desc {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        color: var(--cf-text-secondary);
+        margin-bottom: 0;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $primary;
+        text-decoration: none;
+
+        .material-icons {
+            font-size: 1.125rem;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover .material-icons {
+            transform: translateX(4px);
+        }
+    }
+}
+
+html:not([data-dark-mode]) .feature-card:hover {
+    box-shadow: 0 8px 24px rgba($dark, 0.08);
+}
+
+html[data-dark-mode] .feature-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.four-oh-four {
+    &__code {
+        font-size: clamp(5rem, 15vw, 8rem);
+        font-weight: 700;
+        line-height: 1;
+        background: linear-gradient(135deg, $primary, $cf-accent-muted);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--cf-text-primary);
+    }
+
+    &__desc {
+        font-size: 1.0625rem;
+        max-width: 400px;
+        color: var(--cf-text-secondary);
+    }
+}
