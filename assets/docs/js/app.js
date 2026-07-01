@@ -129,7 +129,7 @@ if (!window.matchMedia('(min-width: 1024px)').matches) {
     if (document.getElementById("close-sidebar")) {
         const closeSidebar = document.getElementById("close-sidebar");
         const sidebar = document.getElementById("sidebar");
-        const sidebarMenuLinks = Array.from(document.querySelectorAll(".sidebar-root-link,.sidebar-nested-link"));
+        const sidebarMenuLinks = Array.from(document.querySelectorAll(".sidebar-root-link,.sidebar-nested-link,.sidebar-section-link"));
         // Close sidebar by clicking outside
         document.addEventListener('click', function(elem) {
             if (!closeSidebar.contains(elem.target) && !sidebar.contains(elem.target))
@@ -158,19 +158,17 @@ if (document.getElementById("navigation")) {
 }
 
 if (document.getElementById("sidebar")) {
-    var elements = document.getElementById("sidebar").getElementsByTagName("button");
-    for (var i = 0, len = elements.length; i < len; i++) {
-        elements[i].onclick = function (elem) {
-            // if(elem.target !== document.querySelectorAll("li.sidebar-dropdown.active > a")[0]){
-            //     document.querySelectorAll("li.sidebar-dropdown.active")[0]?.classList?.toggle("active");
-            //     document.querySelectorAll("div.sidebar-submenu.d-block")[0]?.classList?.toggle("d-block");
-            // }
-            // if(elem.target.getAttribute("href") === "javascript:void(0)") {
-            elem.target.parentElement.classList.toggle("active");
-            elem.target.nextElementSibling.classList.toggle("d-block");
-            // }
-        }
-    }
+    document.querySelectorAll("#sidebar .sidebar-toggle").forEach(function (toggle) {
+        toggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            var dropdown = toggle.closest(".sidebar-dropdown");
+            var submenu = dropdown.querySelector(":scope > .sidebar-submenu");
+            var isOpen = dropdown.classList.toggle("active");
+            submenu.classList.toggle("d-block", isOpen);
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+    });
 }
 
 // Menu sticky

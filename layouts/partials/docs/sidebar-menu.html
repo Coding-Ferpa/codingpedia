@@ -1,0 +1,41 @@
+{{ $currentPage := .currentPage }}
+{{ $showIcons := .showIcons }}
+{{ $nested := .nested | default false }}
+{{ range .pages }}
+{{ if or (.Sections) (.Pages) }}
+{{ $active := or (eq $currentPage.RelPermalink .RelPermalink) ($currentPage.IsDescendant .) }}
+{{ $onIndex := eq $currentPage.RelPermalink .RelPermalink }}
+<li
+    class="sidebar-dropdown{{ if not $showIcons }} no-icon{{ end }}{{ if $nested }} nested{{ end }}{{ if $active }} current active{{ end }}">
+    <div class="sidebar-dropdown-header">
+        <a class="sidebar-section-link{{ if $onIndex }} current{{ end }}" href="{{ .RelPermalink }}">
+            {{ if and $showIcons (not $nested) }}
+            <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+            {{ end }}
+            {{- .Title }}
+        </a>
+        <button class="btn sidebar-toggle" type="button" aria-label="Alternar submenu" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}"></button>
+    </div>
+    <div class="sidebar-submenu{{ if $active }} d-block{{ end }}">
+        <ul>
+            {{ $childPages := union .Sections .Pages }}
+            {{ partial "docs/sidebar-menu.html" (dict "pages" ($childPages.ByWeight) "currentPage" $currentPage "showIcons" $showIcons "nested" true) }}
+        </ul>
+    </div>
+</li>
+{{ else }}
+{{ $active := eq $currentPage.RelPermalink .RelPermalink }}
+<li class="{{ if $active }}current{{ end }}{{ if not $showIcons }} no-icon{{ end }}">
+    {{ if $nested }}
+    <a class="sidebar-nested-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ else }}
+    <a class="sidebar-root-link" href="{{ .RelPermalink }}">
+        {{ if $showIcons }}
+        <i class="material-icons me-2">{{ .Params.icon | default "article" }}</i>
+        {{ end }}
+        {{ .Title }}
+    </a>
+    {{ end }}
+</li>
+{{ end }}
+{{ end }}

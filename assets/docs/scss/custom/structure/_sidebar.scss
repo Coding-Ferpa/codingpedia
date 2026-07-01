@@ -178,7 +178,8 @@
                 }
 
                 a:hover,
-                &.sidebar-dropdown button:hover {
+                &.sidebar-dropdown .sidebar-section-link:hover,
+                &.sidebar-dropdown .sidebar-toggle:hover {
                     background-color: var(--sidebar-dropdown-hover-bg);
                     border-radius: 4px 0 0 4px;
                     margin: 4px 0 4px 0;
@@ -213,37 +214,83 @@
 
             .sidebar-dropdown {
                 &.no-icon {
-                    >button:after {
+                    >.sidebar-dropdown-header .sidebar-toggle:after {
                         top: inherit !important;
                     }
                 }
 
-                >button:after {
-                    content: "\e5cc" !important;
+                .sidebar-dropdown-header {
+                    display: flex;
+                    align-items: stretch;
+                    position: relative;
+                    margin: 4px 0;
+                }
+
+                .sidebar-section-link {
+                    flex: 1;
+                    min-width: 0;
+                    display: flex;
+                    align-items: center;
                     color: var(--sidebar-text-color);
-                    font-family: 'Material Symbols Outlined';
-                    font-weight: 500;
-                    font-size: 22px;
-                    position: absolute;
-                    right: 15px;
-                    top: 7px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 4px 8px 5px 10px;
+                    border-radius: 4px 0 0 4px;
                     transition: all 0.3s ease;
+
+                    &.current {
+                        color: var(--sidebar-primary) !important;
+                        background-color: var(--sidebar-menu-active-bg);
+                        border-right: 3px solid var(--primary);
+                    }
+                }
+
+                .sidebar-toggle {
+                    flex: 0 0 36px;
+                    width: 36px;
+                    min-width: 36px;
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    background: transparent;
+                    position: relative;
+                    color: var(--sidebar-text-color);
+                    border-radius: 0 4px 4px 0;
+
+                    &:after {
+                        content: "\e5cc" !important;
+                        color: var(--sidebar-text-color);
+                        font-family: 'Material Symbols Outlined';
+                        font-weight: 500;
+                        font-size: 22px;
+                        position: absolute;
+                        right: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                &.active {
+                    >.sidebar-dropdown-header .sidebar-toggle:after {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
                 }
 
                 &.nested {
                     &.no-icon {
-                        >button:after {
+                        >.sidebar-dropdown-header .sidebar-toggle:after {
                             top: inherit !important;
                         }
 
-                        >button:before {
-                            // content: "\e5da" !important;
+                        .sidebar-section-link:before {
                             content: none !important;
                         }
                     }
 
-                    button {
+                    .sidebar-section-link {
                         font-size: 14px;
+                        font-weight: 400;
 
                         &:before {
                             content: var(--sidebar-directory-icon);
@@ -253,23 +300,16 @@
                             font-size: 14px;
                             transition: all 0.3s ease;
                         }
+                    }
 
-                        &:after {
-                            top: inherit;
-                        }
+                    .sidebar-toggle:after {
+                        top: inherit;
                     }
                 }
 
-                &.active {
-                    >button:after {
-                        transform: rotate(90deg);
-                        right: 17px;
-                    }
-                }
-
-                // &:hover,
                 &.current {
-                    >button:after {
+                    >.sidebar-dropdown-header .sidebar-toggle:after,
+                    .sidebar-section-link:before {
                         color: var(--sidebar-primary);
                     }
                 }
@@ -349,7 +389,7 @@
         // .sidebar-menu li:hover > a:before,
         .sidebar-menu li.current>a:before,
         .sidebar-menu li.current>button:before,
-        // .sidebar-menu .sidebar-dropdown.active > a,
+        .sidebar-menu .sidebar-dropdown.current .sidebar-section-link,
         .sidebar-header .user-info,
         .sidebar-brand>a:hover {
             color: var(--sidebar-primary) !important;
@@ -364,7 +404,7 @@
         }
 
         // .sidebar-menu li:hover > button,
-        .sidebar-menu .sidebar-dropdown.current>button {
+        .sidebar-menu .sidebar-dropdown.current>.sidebar-dropdown-header .sidebar-section-link {
             color: var(--sidebar-primary) !important;
         }
 

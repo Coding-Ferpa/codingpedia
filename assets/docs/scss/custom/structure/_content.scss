@@ -289,6 +289,24 @@ i {
     font-size: var(--font-size-sm);
 }
 
+.docs-section-intro {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color, var(--gray-300));
+}
+
+.docs-section-author-label {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.docs-topic-grid {
+    margin-top: 0.5rem;
+}
+
+.docs-topic-card {
+    min-height: 120px;
+}
+
 // <figcaption>
 
 .docs-content figcaption {
