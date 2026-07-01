@@ -69,7 +69,7 @@
                                                             <li
                                                                 class="{{ if $active }}current{{ end }} {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }}">
                                                                 <a class="sidebar-nested-link"
-                                                                    href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                                                    href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                                                             {{ end }}
                                                         </ul>
                                                     </div>
@@ -77,7 +77,7 @@
                                                 {{ else }}
                                                 <li
                                                     class="{{ if $active }}current{{ end }} {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }}">
-                                                    <a class="sidebar-nested-link" href="{{ .Permalink }}">{{ .Title
+                                                    <a class="sidebar-nested-link" href="{{ .RelPermalink }}">{{ .Title
                                                         }}</a></li>
                                                 {{ end }}
                                                 {{ end }}
@@ -87,7 +87,7 @@
                                     {{ else }}
                                     <li
                                         class="{{ if $active }}current{{ end }} {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }}">
-                                        <a class="sidebar-nested-link" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                        <a class="sidebar-nested-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                                     {{ end }}
                                     {{ end }}
                                 </ul>
@@ -96,7 +96,7 @@
                         {{ else }}
                         <li
                             class="{{ if $active }}current{{ end }} {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }}">
-                            <a class="sidebar-nested-link" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <a class="sidebar-nested-link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                         {{ end }}
                         {{ end }}
                     </ul>
@@ -105,7 +105,7 @@
             {{ else }}
             {{ $active := in $currentPage.RelPermalink .RelPermalink }}
             <li class="{{ if $active }}current{{ end }}">
-                <a class="sidebar-root-link" href="{{ .Permalink }}">
+                <a class="sidebar-root-link" href="{{ .RelPermalink }}">
                     {{ if eq .Site.Params.docs.sidebarIcons true -}}
                     <i class="material-icons me-2">{{ .Params.icon }}</i>
                     {{ end }}
