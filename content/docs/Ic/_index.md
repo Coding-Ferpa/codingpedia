@@ -1,6 +1,6 @@
 ---
-title: "Introdução à Ciência de Dados"
-weight: 0
+title: Introdução à Ciência de Dados
+weight: 17
 ---
 
 Repositório produzido por [gbiz0](https://github.com/gbiz0) com materiais, exemplos e exercícios da disciplina de **Introdução à Ciência de Dados** do Bacharelado em Sistemas de Informação do IFSP — Campus Votuporanga.

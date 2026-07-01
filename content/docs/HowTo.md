@@ -1,8 +1,8 @@
 ---
 title: "HowTo"
 description: "Guia passo a passo para contribuir com o projeto"
-icon: article
-weight: 0
+icon: "article"
+weight: -3
 ---
 
 Contribuir com este projeto é simples e muito bem-vindo! Siga o passo a passo abaixo para começar.
@@ -51,7 +51,7 @@ title: "Como Contribuir"
 description: ""
 icon: "article"
 toc: true
-weight: 2
+weight: -3
 ---
 
 # Como Contribuir

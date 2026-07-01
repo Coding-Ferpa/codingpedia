@@ -49,11 +49,14 @@ copyrightYearToken = ":YEAR:"
 [params.docs]
 title = "Codingpedia"
 darkMode = true
+katex = true
 themeColor = "codingferpa"
 logoLinkURL = "docs/about/"
 google_fonts = [["Poppins", "400;500;600;700"], ["JetBrains Mono", "400;500"]]
 sans_serif_font = "Poppins"
 secondary_font = "Poppins"
+sidebarIcons = true
+titleIcon = true
 
 [caches]
   [caches.images]

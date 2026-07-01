@@ -86,7 +86,9 @@
 }
 
 body .toggle-dark {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body .toggle-light {
@@ -94,7 +96,9 @@ body .toggle-light {
 }
 
 [data-dark-mode] body .toggle-light {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 [data-dark-mode] body .toggle-dark {

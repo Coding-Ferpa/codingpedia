@@ -256,6 +256,9 @@
                     position: relative;
                     color: var(--sidebar-text-color);
                     border-radius: 0 4px 4px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     &:after {
                         content: "\e5cc" !important;
@@ -263,17 +266,13 @@
                         font-family: 'Material Symbols Outlined';
                         font-weight: 500;
                         font-size: 22px;
-                        position: absolute;
-                        right: 8px;
-                        top: 50%;
-                        transform: translateY(-50%);
                         transition: all 0.3s ease;
                     }
                 }
 
                 &.active {
                     >.sidebar-dropdown-header .sidebar-toggle:after {
-                        transform: translateY(-50%) rotate(90deg);
+                        transform: rotate(90deg);
                     }
                 }
 

@@ -96,7 +96,7 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color);
     --#{$prefix}secondary-color: var(--gray-600);
 
     --body-color: var(--text-default);
-    --body-bg: var(--white);
+    --body-bg: var(--cf-bg-primary);
 
     // Text
     --text-dark: #3C4257;
@@ -126,7 +126,7 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color);
 
 [data-dark-mode] {
 
-    --body-bg: var(--dark); // #000000
+    --body-bg: var(--cf-bg-primary);
     --text-default: var(--text-light);
     --text-default-inv: var(--text-dark);
     --text-muted: #b6b9be; // Slightly brighter for contrast on black
@@ -156,8 +156,8 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color);
 
     // sidebar
     --sidebar-primary: var(--primary-300);
-    --sidebar-bg: var(--dark); // #000000
-    --top-header-bg: rgba(0, 0, 0, 0.9); // Black header
+    --sidebar-bg: var(--cf-bg-elevated);
+    --top-header-bg: rgba(22, 22, 22, 0.85);
     --sidebar-text-color: #b6bbc9;
     --sidebar-border-color: var(--gray-900);
 

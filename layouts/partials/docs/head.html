@@ -67,7 +67,7 @@
     {{- end -}}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $style.Data.Integrity }}"{{ end -}} crossorigin="anonymous">
     <!-- Katex CSS -->
-    {{- if .Params.katex -}}
+    {{- if or .Params.katex .Site.Params.docs.katex -}}
     {{- $options := dict "enableSourceMap" true }}
     {{- if hugo.IsProduction}}
         {{- $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="{{ $katexCSS.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $katexCSS.Data.Integrity }}"{{ end -}} crossorigin="anonymous">
     {{- end -}}
     <!-- Katex JS -->
-    {{- if .Params.katex -}}
+    {{- if or .Params.katex .Site.Params.docs.katex -}}
     {{ $katex := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/katex.js") }}
     {{ $katexAutoRender := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/auto-render.js") }}
     {{ if hugo.IsProduction }}
@@ -92,7 +92,7 @@
     {{ end -}}
 
     <!-- Katex Config -->
-    {{ if .Params.katex }}
+    {{ if or .Params.katex .Site.Params.docs.katex }}
         {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer/katex.html") . -}}
     {{ end }}
     <!-- Plausible Analytics Config -->

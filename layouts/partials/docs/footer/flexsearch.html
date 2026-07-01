@@ -140,13 +140,13 @@
             {
                 id: {{ $index }},
                 href: "{{ .RelPermalink }}",
-                title: {{ .Title }},
+                title: {{ .Title | jsonify }},
                 {{ with .Description -}}
-                    description: {{ . }},
+                    description: {{ . | jsonify }},
                 {{ else -}}
-                description: {{ .Summary | htmlUnescape | plainify }},
+                description: {{ .Summary | htmlUnescape | plainify | jsonify }},
                 {{ end -}}
-                content: {{ .Content | htmlUnescape | plainify }}
+                content: {{ .Content | htmlUnescape | plainify | jsonify }}
             }
         );
     {{ end -}}

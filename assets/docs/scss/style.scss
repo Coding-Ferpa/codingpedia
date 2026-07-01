@@ -14,8 +14,8 @@ $code-block-padding-top: 1.25rem 0 0 0;
 
 // Core files
 @import "../../scss/bootstrap/functions";
-@import "../../scss/bootstrap/variables";
 @import "custom/colors/codingferpa";
+@import "../../scss/bootstrap/variables";
 @import "../../scss/bootstrap/mixins";
 @import "../../scss/bootstrap/bootstrap";
 @import "variables";
@@ -52,3 +52,4 @@ $code-block-padding-top: 1.25rem 0 0 0;
 // Plugins
 @import "custom/plugins/prism/themes/lotusdocs";
 @import "custom/plugins/prism/prism";
+@import "custom/plugins/flexsearch/flexsearch";

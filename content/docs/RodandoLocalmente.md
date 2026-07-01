@@ -1,9 +1,9 @@
 ---
-title: "RodandoLocalmente"
+title: "Rodando Localmente"
 description: "Guia rápido para visualizar o projeto em ambiente local com Hugo"
 icon: "terminal"
 toc: true
-weight: 0
+weight: -1
 ---
 
 ## Rodando o Projeto Localmente

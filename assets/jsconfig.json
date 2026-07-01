@@ -1,6 +1,5 @@
 {
  "compilerOptions": {
-  "baseUrl": ".",
   "paths": {
    "*": [
     "../_vendor/github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2/package/dist/cjs/*",
